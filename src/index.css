@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  width: 350px;
+  margin: 50px auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+
+.top {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.top input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.top input:focus {
+  border-color: #6a5acd;
+}
+
+.top button {
+  background: #6a5acd;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.top button:hover {
+  background: #5a4acb;
+}
+
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+
+
+
+.task-item button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.task-item button:hover {
+  background: #e63636;
+}
+
+
+.task-item span {
+  font-size: 16px;
+  color: #333;
+}
