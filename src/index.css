@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 main {
   width: 350px;
   margin: 50px auto;
@@ -13,6 +12,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
 }
 
 
@@ -29,6 +29,7 @@ main {
   border-radius: 8px;
   font-size: 15px;
   outline: none;
+  flex: 1;
 }
 
 .top input:focus {
@@ -50,7 +51,6 @@ main {
   background: #5a4acb;
 }
 
-
 .task-item {
   display: flex;
   justify-content: space-between;
@@ -63,8 +63,11 @@ main {
   transition: 0.2s;
 }
 
-
-
+.task-item span {
+  font-size: 16px;
+  color: #333;
+  word-break: break-word;
+}
 
 .task-item button {
   background: #ff4d4d;
@@ -82,7 +85,19 @@ main {
 }
 
 
-.task-item span {
-  font-size: 16px;
-  color: #333;
+@media (max-width: 480px) {
+  main {
+    width: 90%;
+    padding: 20px 30px;
+  }
+
+  .top input,
+  .top button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .task-item span {
+    font-size: 14px;
+  }
 }
