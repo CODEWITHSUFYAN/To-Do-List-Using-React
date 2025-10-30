@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import ContextAPI from "./store/Context";
 
-function TodoInput({ addTask }) {
+function TodoInput() {
   const [task, setTask] = useState("");
+  const {tasks , setTasks} = useContext(ContextAPI)
 
   const handleAdd = () => {
-    addTask(task);
+    setTasks([...tasks,task]);
     setTask("");
   };
 

@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ContextAPI from './store/Context'
+const TasksList = () => {
 
-const TasksList = ({ tasks, deleteTask }) => {
+  const { tasks , deleteTask} = useContext(ContextAPI)
+
   return (
         <div className="task">
          {tasks.map((t, index) => (

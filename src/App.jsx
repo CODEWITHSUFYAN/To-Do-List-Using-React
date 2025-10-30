@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoInput from "./components/TodoInput.jsx";
 import TodoList from "./components/TasksList.jsx";
+import ContextAPI from "./components/store/Context.jsx";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -18,10 +19,14 @@ function App() {
 
   return (
     <main>
-      <TodoInput addTask={addTask} />
-      <TodoList tasks={tasks} deleteTask={deleteTask} />
+      <ContextAPI.Provider value={{addTask,deleteTask,setTasks,tasks}}>
+        <TodoInput  />
+        <TodoList />
+      </ContextAPI.Provider>
     </main>
   );
 }
+
+
 
 export default App;
